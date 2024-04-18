@@ -1,5 +1,8 @@
 import classNames from "classnames/bind";
 
+import { HeaderComponent } from "../../components/header";
+import { VideoWrapperComponent } from "./components/videoWrapper";
+import { languageOptions } from "./constant";
 import styles from "./style.module.scss";
 
 const cx = classNames.bind(styles);
@@ -7,8 +10,7 @@ const cx = classNames.bind(styles);
 function HomePage() {
   return (
     <div className={cx("page")}>
-      <h1>Home</h1>
-      <p>기본 페이지</p>
+      <HeaderComponent languageOptions={languageOptions} colorTheme="dark" />
     </div>
   );
 }

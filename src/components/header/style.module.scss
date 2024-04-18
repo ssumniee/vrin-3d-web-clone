@@ -92,17 +92,11 @@
 }
 
 .button {
-  border: 0;
-  outline: 0;
   padding: 0;
-  text-decoration: none;
-  white-space: nowrap;
   font-size: 18px;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 0;
-  background-color: transparent;
-  cursor: pointer;
 
   &.register {
     padding: 12px 20px;
