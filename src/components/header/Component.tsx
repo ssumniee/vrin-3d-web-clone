@@ -9,7 +9,7 @@ type Props = {
 
 const cx = classNames.bind(styles);
 
-function Header({ simplified = false, colorTheme }: Props) {
+function HeaderComponent({ simplified = false, colorTheme }: Props) {
   return (
     <div className={cx("component", { simplified })} color-theme={colorTheme}>
       <div className={cx("logo")}>
@@ -33,4 +33,4 @@ function Header({ simplified = false, colorTheme }: Props) {
   );
 }
 
-export default Header;
+export default HeaderComponent;
