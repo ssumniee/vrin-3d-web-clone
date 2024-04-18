@@ -74,7 +74,7 @@
   cursor: pointer;
 
   .icon {
-    mask: url(/assets/icons/logo.svg) no-repeat;
+    mask: url("../../assets/icons/logo.svg") no-repeat;
     content: "";
     display: block;
     width: 76px;
