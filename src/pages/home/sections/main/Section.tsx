@@ -1,12 +1,16 @@
+import { forwardRef } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
 
 const cx = classNames.bind(styles);
 
-function HomePage() {
+const MainSection = forwardRef<HTMLDivElement | null>(function MainSection(
+  _,
+  ref
+) {
   return (
-    <div className={cx("section")}>
+    <div ref={ref} className={cx("section")}>
       <div className={cx("content-wrapper")}>
         <div className={cx("content")}>
           <span className={cx("title")}>
@@ -25,6 +29,6 @@ function HomePage() {
       </div>
     </div>
   );
-}
+});
 
-export default HomePage;
+export default MainSection;

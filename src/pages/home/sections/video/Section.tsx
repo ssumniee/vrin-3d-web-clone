@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
@@ -25,6 +25,7 @@ function VideoSection({
   titles,
   descriptions,
 }: Props) {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [videPosition, setVideoPosition] = useState<
     "above" | "fixed" | "below"
   >("below");
@@ -40,13 +41,13 @@ function VideoSection({
         }
       });
     }, options);
-    const target = document.querySelector(`#video-section-${index}`);
+    const target = ref.current;
 
     if (target) observer.observe(target);
-  }, []);
+  }, [ref]);
 
   return (
-    <div id={`video-section-${index}`} className={cx("section")}>
+    <div ref={ref} id={`video-section-${index}`} className={cx("section")}>
       <div
         className={cx("video")}
         style={{
