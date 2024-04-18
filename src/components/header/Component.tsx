@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import { Link } from "react-router-dom";
 
 import styles from "./style.module.scss";
 
@@ -20,9 +21,13 @@ function HeaderComponent({ simplified = false, colorTheme }: Props) {
           <p className={cx("message")}>If you want to use VRIN 3D</p>
         ) : (
           <>
-            <button className={cx("button", "pricing")}>Pricing</button>
+            <Link to="/pricing" className={cx("button", "pricing")}>
+              Pricing
+            </Link>
             <button className={cx("button", "language")}>ENG</button>
-            <button className={cx("button", "login")}>Log in</button>
+            <Link to="/login" className={cx("button", "login")}>
+              Log in
+            </Link>
           </>
         )}
         <button className={cx("button", "register")}>
