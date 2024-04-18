@@ -13,7 +13,7 @@ function HeaderComponent({ simplified = false, colorTheme }: Props) {
   return (
     <div className={cx("component", { simplified })} color-theme={colorTheme}>
       <div className={cx("logo")}>
-        <i className={cx("icon")}></i>
+        <i className={cx("icon")} />
       </div>
       <div className={cx("buttons")}>
         {simplified ? (
