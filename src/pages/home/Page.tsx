@@ -5,6 +5,7 @@ import { HeaderComponent } from "../../components/header";
 import { MainSection } from "./sections/main";
 import { VideoSection } from "./sections/video";
 import { AdvantageSection } from "./sections/advantage";
+import { ClosingSection } from "./sections/closing";
 import { languageOptions, videoDataList, advantageDataList } from "./constant";
 import styles from "./style.module.scss";
 
@@ -45,6 +46,7 @@ function HomePage() {
       {advantageDataList.map((data, idx) => (
         <AdvantageSection key={`advantage-section-${idx}`} {...data} />
       ))}
+      <ClosingSection />
     </div>
   );
 }
