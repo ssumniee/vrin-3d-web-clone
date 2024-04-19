@@ -4,7 +4,8 @@ import classNames from "classnames/bind";
 import { HeaderComponent } from "../../components/header";
 import { MainSection } from "./sections/main";
 import { VideoSection } from "./sections/video";
-import { languageOptions, videoDataList } from "./constant";
+import { AdvantageSection } from "./sections/advantage";
+import { languageOptions, videoDataList, advantageDataList } from "./constant";
 import styles from "./style.module.scss";
 
 const cx = classNames.bind(styles);
@@ -35,11 +36,14 @@ function HomePage() {
       <MainSection ref={mainRef} />
       {videoDataList.map((data, idx, arr) => (
         <VideoSection
-          key={`section-${idx}`}
+          key={`video-section-${idx}`}
           index={idx}
           length={arr.length}
           {...data}
         />
+      ))}
+      {advantageDataList.map((data, idx) => (
+        <AdvantageSection key={`advantage-section-${idx}`} {...data} />
       ))}
     </div>
   );

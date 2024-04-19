@@ -1,0 +1,43 @@
+.section {
+  position: relative;
+  width: calc(100% - 180px);
+  max-width: 1300px;
+  padding: 180px 0px 320px;
+  margin: 0 auto;
+  white-space: pre-wrap;
+}
+
+.text {
+  .sub-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(
+        0deg,
+        rgb(115, 55, 255) 0%,
+        rgb(49, 69, 255) 100%
+      )
+      text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+  }
+
+  .title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .description {
+    color: #f6f7f8;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: 20px;
+  }
+}
+
+.content {
+  margin-top: 64px;
+}
