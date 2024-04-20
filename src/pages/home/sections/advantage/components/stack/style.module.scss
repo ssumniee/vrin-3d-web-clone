@@ -1,0 +1,51 @@
+.component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  padding: 64px 0px;
+  text-align: center;
+  border-radius: 16px;
+  background: linear-gradient(
+    221deg,
+    rgba(255, 255, 255, 0.2) -0.09%,
+    rgba(81, 30, 198, 0.03) 99.94%
+  );
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 800;
+    line-height: 120%;
+
+    .icon {
+      width: 56px;
+      height: 56px;
+      margin-left: 8px;
+    }
+  }
+
+  .sub-title {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .description {
+    color: #bdc1c7;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}

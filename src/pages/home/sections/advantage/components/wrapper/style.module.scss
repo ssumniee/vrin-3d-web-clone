@@ -1,10 +1,11 @@
-.section {
+.wrapper {
   position: relative;
   width: calc(100% - 180px);
   max-width: 1300px;
-  padding: 180px 0px 320px;
+  padding: 200px 0px;
   margin: 0 auto;
   white-space: pre-wrap;
+  overflow: hidden;
 }
 
 .text {

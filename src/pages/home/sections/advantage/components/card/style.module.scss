@@ -1,0 +1,138 @@
+.component {
+  padding-bottom: 120px;
+  display: flex;
+  column-gap: 24px;
+}
+
+.item {
+  flex-direction: row;
+  position: relative;
+  max-width: 588px;
+  width: 50%;
+  height: 609px;
+  border-radius: 22px;
+  background: linear-gradient(
+    221deg,
+    rgba(255, 255, 255, 0.2) -0.09%,
+    rgba(81, 30, 198, 0.14) 99.94%
+  );
+  padding: 58px 64px;
+  overflow-y: visible;
+  cursor: pointer;
+
+  .text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 8px;
+
+    & > div {
+      color: #fff;
+      font-weight: 600;
+      line-height: 140%;
+      white-space: pre-wrap;
+      z-index: 2;
+    }
+
+    .title {
+      font-size: clamp(24px, 2.2vw, 36px);
+    }
+
+    .description {
+      display: none;
+      font-size: clamp(18px, 2.2vw, 28px);
+    }
+
+    .icon {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  .content {
+    > * {
+      position: absolute;
+      pointer-events: none;
+    }
+
+    img {
+      &.main {
+        &.video {
+          width: 106%;
+          top: 110px;
+          right: -32px;
+        }
+
+        &.screenshots {
+          width: 86%;
+          top: 200px;
+          right: 45px;
+        }
+      }
+
+      &.background {
+        width: 105%;
+        top: 130px;
+        right: -31px;
+        display: none;
+      }
+
+      &.screenshot {
+        width: 100%;
+        top: 210px;
+        right: -30px;
+        display: none;
+      }
+    }
+
+    video {
+      width: 40%;
+      top: 330px;
+      right: 78px;
+      display: none;
+    }
+  }
+
+  &:hover {
+    background: linear-gradient(
+      225deg,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(81, 30, 198, 0.35) 100%
+    );
+
+    .text {
+      .title {
+        display: none;
+      }
+
+      .description {
+        display: block;
+      }
+
+      .icon {
+        display: none;
+      }
+    }
+
+    .content {
+      img {
+        &.main {
+          display: none;
+        }
+
+        &.background {
+          display: block;
+        }
+
+        &.screenshot {
+          display: block;
+        }
+      }
+
+      video {
+        display: block;
+      }
+    }
+  }
+}
