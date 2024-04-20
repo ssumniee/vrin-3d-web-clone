@@ -1,9 +1,9 @@
-import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
+import classNames from "classnames/bind";
 
-import styles from "./style.module.scss";
 import { LanguageSelectorComponent } from "../languageSelector";
 import type { LanguageOption } from "../languageSelector/Component";
+import styles from "./style.module.scss";
 
 type Props = {
   simplified?: boolean;
@@ -40,9 +40,9 @@ function HeaderComponent({
             </Link>
           </>
         )}
-        <button className={cx("button", "register")}>
+        <Link to="/register" className={cx("button", "register")}>
           Get started for free
-        </button>
+        </Link>
       </div>
     </div>
   );

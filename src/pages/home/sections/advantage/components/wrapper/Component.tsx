@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
 
-export type AdvantageData = {
+type AdvantageData = {
   titles: string[];
   subTitles: string[];
   descriptions?: string[];

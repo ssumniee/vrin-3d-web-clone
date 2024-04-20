@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
@@ -8,7 +9,9 @@ function ClosingSection() {
   return (
     <div className={cx("section")}>
       <div className={cx("message")}>Still hesitating?</div>
-      <button className={cx("button", "register")}>Get started for free</button>
+      <Link to="/register" className={cx("button", "register")}>
+        Get started for free
+      </Link>
     </div>
   );
 }

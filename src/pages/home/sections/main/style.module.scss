@@ -37,6 +37,7 @@
   }
 
   .button.register {
+    display: block;
     padding: 16px;
     margin-top: 56px;
     width: 326px;
@@ -44,6 +45,7 @@
     font-size: 24px;
     font-weight: 600;
     line-height: 140%;
+    text-align: center;
     background-color: #3737cc;
     color: #fff;
 
