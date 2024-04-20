@@ -95,7 +95,16 @@ function AdvantageSection() {
           "Download 3D model VRIN 3D prefabricated, use it for promotion, VR showroom, commercial VFX.",
         ]}
       >
-        <SliderComponent />
+        <SliderComponent
+          items={[
+            { title: "Virtual Showroom", image: "carousel_thumbnail_1_PC.png" },
+            { title: "Exhibition", image: "carousel_thumbnail_2_PC.png" },
+            {
+              title: "Product Promotion",
+              image: "carousel_thumbnail_3_PC.png",
+            },
+          ]}
+        />
       </AdvantageWrapperComponent>
     </>
   );
