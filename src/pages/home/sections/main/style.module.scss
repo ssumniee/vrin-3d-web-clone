@@ -1,5 +1,5 @@
 .section {
-  background-image: url("../../../../assets/images/home_A-1.png");
+  background-image: url("../../../../assets/images/home_A-1_PC.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -25,14 +25,14 @@
     display: inline-block;
     margin-bottom: 12px;
     color: #e6e8eb;
-    font-size: 52px;
+    font-size: 5.2rem;
     font-weight: 700;
     line-height: normal;
   }
 
   .description {
     color: #bdc1c7;
-    font-size: 32px;
+    font-size: 3.2rem;
     font-weight: 400;
     line-height: 140%;
   }
@@ -43,7 +43,7 @@
     margin-top: 56px;
     width: 326px;
     border-radius: 6px;
-    font-size: 24px;
+    font-size: 2.4rem;
     font-weight: 600;
     line-height: 140%;
     text-align: center;
@@ -52,6 +52,88 @@
 
     &:hover {
       background-color: #5d6cfa;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_laptop.png");
+  }
+
+  .content-wrapper {
+    max-width: 844px;
+    max-height: 870px;
+  }
+
+  .content {
+    .title {
+      font-size: 4.8rem;
+    }
+
+    .description {
+      font-size: 2.4rem;
+    }
+
+    .button.register {
+      max-width: 243px;
+      margin-top: 48px;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_tablet.png");
+  }
+
+  .content-wrapper {
+    max-width: 630px;
+    width: calc(100% - 140px);
+    max-height: 540px;
+  }
+
+  .content {
+    .title {
+      font-size: 4.4rem;
+    }
+
+    .button.register {
+      max-width: 210px;
+      padding: 12px;
+      margin-top: 40px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_mob.png");
+  }
+
+  .content-wrapper {
+    width: calc(100% - 40px);
+    max-height: 420px;
+  }
+
+  .content {
+    .title {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1.6rem;
+    }
+
+    .button.register {
+      max-width: 160px;
+      padding: 10px;
+      margin-top: 24px;
+      border-radius: 4px;
+      font-size: 1.4rem;
     }
   }
 }
