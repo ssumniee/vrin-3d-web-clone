@@ -6,7 +6,7 @@ import { CardComponent } from "./components/card";
 import { SliderComponent } from "./components/slider";
 
 function AdvantageSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <>
@@ -62,7 +62,7 @@ function AdvantageSection() {
                 t("home.advantage2.content.item1.description3"),
                 t("home.advantage2.content.item1.description4"),
               ],
-              image: "home_C-1_PC_en.png",
+              image: `home_C-1_PC_${i18n.language}.png`,
               background: "home_C-3_PC.png",
               video: "home_2_PC.mp4",
             },
@@ -72,13 +72,14 @@ function AdvantageSection() {
                 t("home.advantage2.content.item2.title1"),
                 t("home.advantage2.content.item2.title2"),
                 t("home.advantage2.content.item2.title3"),
+                t("home.advantage2.content.item2.title4"),
               ],
               descriptions: [
                 t("home.advantage2.content.item2.description1"),
                 t("home.advantage2.content.item2.description2"),
                 t("home.advantage2.content.item2.description3"),
               ],
-              image: "home_C-2_PC_en.png",
+              image: `home_C-2_PC_${i18n.language}.png`,
               screenshots: [
                 "home_bag_1.png",
                 "home_bag_2.png",

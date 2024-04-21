@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
@@ -40,6 +41,7 @@ function CardComponent({ items }: Props) {
 
 function CardItem({ index, ...data }: { index: number } & CardData) {
   const [highlighted, setHighlighted] = useState(false);
+  const { i18n } = useTranslation();
 
   return (
     <div
@@ -51,7 +53,7 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
         setHighlighted(false);
       }}
     >
-      <div className={cx("text")}>
+      <div className={cx("text", i18n.language)}>
         <div className={cx("title")}>
           {data.titles.map((title, idx) => (
             <div key={`card-item-${index}-title-${idx}`}>{title}</div>
@@ -71,15 +73,15 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
           />
         )}
       </div>
-      <div className={cx("content")}>
+      <div className={cx("content", i18n.language)}>
         <img
-          className={cx("main", data.type)}
+          className={cx(`${data.type}-main`)}
           src={`/assets/images/${data.image}`}
         />
         {isVideoCardData(data) ? (
           <>
             <img
-              className={cx("background")}
+              className={cx("video-background")}
               src={`/assets/images/${data.background}`}
             />
             <video
