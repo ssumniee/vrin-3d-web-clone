@@ -1,38 +1,15 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import { useTranslation } from "react-i18next";
-import throttle from "lodash/throttle";
 
+import { SizeContext } from "../../../../contexts/SizeContext";
 import AdvantageWrapperComponent from "./components/wrapper/Component";
 import { StackComponent } from "./components/stack";
 import { CardComponent } from "./components/card";
 import { SliderComponent } from "./components/slider";
 
-type DeviceType = "mobile" | "tablet" | "laptop" | "pc";
-
 function AdvantageSection() {
-  const [deviceType, setDeviceType] = useState<DeviceType>("pc");
+  const size = useContext(SizeContext);
   const { t, i18n } = useTranslation();
-
-  useEffect(() => {
-    const resizeHandler = throttle(() => {
-      if (window.innerWidth <= 600) {
-        setDeviceType("mobile");
-      } else if (window.innerWidth <= 768) {
-        setDeviceType("tablet");
-      } else if (window.innerWidth <= 1024) {
-        setDeviceType("laptop");
-      } else {
-        setDeviceType("pc");
-      }
-    }, 200);
-
-    window.addEventListener("resize", resizeHandler);
-    resizeHandler();
-
-    return () => {
-      window.removeEventListener("resize", resizeHandler);
-    };
-  }, []);
 
   return (
     <>
@@ -88,8 +65,8 @@ function AdvantageSection() {
                 t("home.advantage2.content.item1.description3"),
                 t("home.advantage2.content.item1.description4"),
               ],
-              image: `home_C-1_${deviceType}_${i18n.language}.png`,
-              background: `home_C-3_${deviceType}.png`,
+              image: `home_C-1_${size}_${i18n.language}.png`,
+              background: `home_C-3_${size}.png`,
               video: `home_2.mp4`,
             },
             {
@@ -105,7 +82,7 @@ function AdvantageSection() {
                 t("home.advantage2.content.item2.description2"),
                 t("home.advantage2.content.item2.description3"),
               ],
-              image: `home_C-2_${deviceType}_${i18n.language}.png`,
+              image: `home_C-2_${size}_${i18n.language}.png`,
               screenshots: [
                 "home_bag_1.png",
                 "home_bag_2.png",
@@ -135,15 +112,15 @@ function AdvantageSection() {
           items={[
             {
               title: t("home.advantage3.content.item1.title"),
-              image: `carousel_thumbnail_1_${deviceType}.png`,
+              image: `carousel_thumbnail_1_${size}.png`,
             },
             {
               title: t("home.advantage3.content.item2.title"),
-              image: `carousel_thumbnail_2_${deviceType}.png`,
+              image: `carousel_thumbnail_2_${size}.png`,
             },
             {
               title: t("home.advantage3.content.item3.title"),
-              image: `carousel_thumbnail_3_${deviceType}.png`,
+              image: `carousel_thumbnail_3_${size}.png`,
             },
           ]}
         />
