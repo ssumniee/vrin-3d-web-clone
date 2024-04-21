@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/vrin-3d-web-clone/static/css/main.ee0b2ef9.css",
+    "main.js": "/vrin-3d-web-clone/static/js/main.ade15441.js",
+    "static/js/453.be6364ff.chunk.js": "/vrin-3d-web-clone/static/js/453.be6364ff.chunk.js",
+    "static/media/Pretendard-Black.woff": "/vrin-3d-web-clone/static/media/Pretendard-Black.c51355ddc1caec596031.woff",
+    "static/media/Pretendard-ExtraBold.woff": "/vrin-3d-web-clone/static/media/Pretendard-ExtraBold.f6491e200d1fb5c5917b.woff",
+    "static/media/Pretendard-Bold.woff": "/vrin-3d-web-clone/static/media/Pretendard-Bold.1f1dbbbf311ffffcc770.woff",
+    "static/media/Pretendard-SemiBold.woff": "/vrin-3d-web-clone/static/media/Pretendard-SemiBold.9f6b39f88e7e6a3fd0b2.woff",
+    "static/media/Pretendard-Medium.woff": "/vrin-3d-web-clone/static/media/Pretendard-Medium.edd5e28caa1cc4a9e0b7.woff",
+    "static/media/home_A-1_pc.png": "/vrin-3d-web-clone/static/media/home_A-1_pc.2035d4b4dfd0047f274b.png",
+    "static/media/home_A-1_laptop.png": "/vrin-3d-web-clone/static/media/home_A-1_laptop.a674ca2fd13513f784d3.png",
+    "static/media/home_D-1_pc.png": "/vrin-3d-web-clone/static/media/home_D-1_pc.b3cb6e0d8e2704adad82.png",
+    "static/media/home_A-1_tablet.png": "/vrin-3d-web-clone/static/media/home_A-1_tablet.4ec4429434a1d6958177.png",
+    "static/media/home_A-1_mobile.png": "/vrin-3d-web-clone/static/media/home_A-1_mobile.4c39ecfdd7fd4f53118f.png",
+    "static/media/home_D-1_laptop.png": "/vrin-3d-web-clone/static/media/home_D-1_laptop.b4a451cb9dcdcb83ea34.png",
+    "static/media/logo-small.svg": "/vrin-3d-web-clone/static/media/logo-small.87af6c8f162d11aaf8e7.svg",
+    "static/media/logo.svg": "/vrin-3d-web-clone/static/media/logo.8d484849895d699c121f.svg",
+    "index.html": "/vrin-3d-web-clone/index.html",
+    "static/media/arrow-outward.svg": "/vrin-3d-web-clone/static/media/arrow-outward.22eddb6d86f386623de6.svg",
+    "static/media/cross.svg": "/vrin-3d-web-clone/static/media/cross.884c059b0ecd2b3bdfb1.svg",
+    "static/media/arrow-circle-outward-small.svg": "/vrin-3d-web-clone/static/media/arrow-circle-outward-small.6ba77c01c81a4dd152a8.svg",
+    "static/media/hamburger.svg": "/vrin-3d-web-clone/static/media/hamburger.5a1848fc19c917077c91.svg",
+    "main.ee0b2ef9.css.map": "/vrin-3d-web-clone/static/css/main.ee0b2ef9.css.map",
+    "main.ade15441.js.map": "/vrin-3d-web-clone/static/js/main.ade15441.js.map",
+    "453.be6364ff.chunk.js.map": "/vrin-3d-web-clone/static/js/453.be6364ff.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ee0b2ef9.css",
+    "static/js/main.ade15441.js"
+  ]
+}
