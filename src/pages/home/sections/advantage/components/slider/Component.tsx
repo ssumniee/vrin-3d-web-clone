@@ -37,7 +37,7 @@ function SliderComponent({ items, settings = {} }: Props) {
 
   return (
     <div className={cx("component")}>
-      <img className={cx("container")} src="/assets/images/home_D-1_PC.png" />
+      <div className={cx("container")} />
       <div className={cx("slider")}>
         <Slider ref={sliderRef} {...sliderSettings}>
           {items.map(({ title, image }, idx) => (
@@ -48,10 +48,7 @@ function SliderComponent({ items, settings = {} }: Props) {
               />
               <div className={cx("title")}>
                 <div>{title}</div>
-                <img
-                  className={cx("icon")}
-                  src="/assets/icons/arrow-outward.svg"
-                />
+                <i className={cx("icon")} />
               </div>
             </div>
           ))}
@@ -64,6 +61,7 @@ function SliderComponent({ items, settings = {} }: Props) {
             <img src="/assets/icons/arrow-circle-right.svg" />
           </button>
         </div>
+        <div className={cx("shadow")} />
       </div>
     </div>
   );

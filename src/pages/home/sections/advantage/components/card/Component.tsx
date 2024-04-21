@@ -46,7 +46,10 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
 
   return (
     <div
-      className={cx("item")}
+      className={cx("item", { highlighted })}
+      onClick={() => {
+        setHighlighted((current) => !current);
+      }}
       onMouseEnter={() => {
         setHighlighted(true);
       }}
@@ -67,7 +70,9 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
             </div>
           ))}
         </div>
-        {highlighted ? null : (
+        {highlighted ? (
+          <img className={cx("icon")} src="/assets/icons/cross-circle.svg" />
+        ) : (
           <img
             className={cx("icon")}
             src="/assets/icons/arrow-circle-outward.svg"
