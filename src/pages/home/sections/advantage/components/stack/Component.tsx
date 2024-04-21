@@ -4,9 +4,9 @@ import styles from "./style.module.scss";
 
 type StackData = {
   icon: string;
-  titles: string[];
-  subTitles: string[];
-  descriptions: string[];
+  title: string;
+  subTitle: string;
+  description: string;
 };
 
 type Props = {
@@ -28,32 +28,18 @@ function StackComponent({ items }: Props) {
 function StackItem({
   index,
   icon,
-  titles,
-  subTitles,
-  descriptions,
+  title,
+  subTitle,
+  description,
 }: { index: number } & StackData) {
   return (
     <div className={cx("item")}>
       <div className={cx("title")}>
-        <div>
-          {titles.map((title, idx) => (
-            <div key={`stack-item-${index}-title-${idx}`}>{title}</div>
-          ))}
-        </div>
+        {title}
         <img className={cx("icon")} src={`/assets/icons/${icon}`} />
       </div>
-      <div className={cx("sub-title")}>
-        {subTitles.map((subTitle, idx) => (
-          <div key={`stack-item-${index}-subTitle-${idx}`}>{subTitle}</div>
-        ))}
-      </div>
-      <div className={cx("description")}>
-        {descriptions.map((description, idx) => (
-          <div key={`stack-item-${index}-description-${idx}`}>
-            {description}
-          </div>
-        ))}
-      </div>
+      <div className={cx("sub-title")}>{subTitle}</div>
+      <div className={cx("description")}>{description}</div>
     </div>
   );
 }

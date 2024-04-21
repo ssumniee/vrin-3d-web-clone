@@ -24,23 +24,23 @@ function HeaderComponent({ simplified = false, languages, colorTheme }: Props) {
       </div>
       <div className={cx("buttons")}>
         {simplified ? (
-          <p className={cx("message")}>If you want to use VRIN 3D</p>
+          <p className={cx("message")}>{t("header.message")}</p>
         ) : (
           <>
             <Link to="/pricing" className={cx("button", "pricing")}>
-              Pricing
+              {t("header.pricing")}
             </Link>
             <LanguageSelectorComponent
               colorTheme={colorTheme}
               languages={languages}
             />
             <Link to="/login" className={cx("button", "login")}>
-              {t(`header.login`)}
+              {t("header.login")}
             </Link>
           </>
         )}
         <Link to="/register" className={cx("button", "register")}>
-          Get started for free
+          {t("header.register")}
         </Link>
       </div>
     </div>

@@ -3,7 +3,7 @@ import classNames from "classnames/bind";
 
 import styles from "./style.module.scss";
 
-export type VideoData = {
+type VideoData = {
   icon: string;
   video: string;
   titles: string[];
