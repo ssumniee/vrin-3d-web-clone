@@ -6,7 +6,6 @@ import { MainSection } from "./sections/main";
 import { VideoSection } from "./sections/video";
 import { AdvantageSection } from "./sections/advantage";
 import { ClosingSection } from "./sections/closing";
-import { languageOptions } from "./constant";
 import styles from "./style.module.scss";
 
 const cx = classNames.bind(styles);
@@ -29,11 +28,7 @@ function HomePage() {
 
   return (
     <div className={cx("page")}>
-      <HeaderComponent
-        simplified={headerSimplified}
-        languageOptions={languageOptions}
-        colorTheme="dark"
-      />
+      <HeaderComponent simplified={headerSimplified} colorTheme="dark" />
       <MainSection ref={mainRef} />
       <VideoSection />
       <AdvantageSection />

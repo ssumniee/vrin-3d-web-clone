@@ -1,23 +1,22 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
 import { LanguageSelectorComponent } from "../languageSelector";
-import type { LanguageOption } from "../languageSelector/Component";
+import type { LanguageCode } from "../languageSelector/Component";
 import styles from "./style.module.scss";
 
 type Props = {
   simplified?: boolean;
-  languageOptions: LanguageOption[];
+  languages?: LanguageCode[];
   colorTheme: "light" | "dark";
 };
 
 const cx = classNames.bind(styles);
 
-function HeaderComponent({
-  simplified = false,
-  languageOptions,
-  colorTheme,
-}: Props) {
+function HeaderComponent({ simplified = false, languages, colorTheme }: Props) {
+  const { t } = useTranslation();
+
   return (
     <div className={cx("component", { simplified })} color-theme={colorTheme}>
       <div className={cx("logo")}>
@@ -33,10 +32,10 @@ function HeaderComponent({
             </Link>
             <LanguageSelectorComponent
               colorTheme={colorTheme}
-              languageOptions={languageOptions}
+              languages={languages}
             />
             <Link to="/login" className={cx("button", "login")}>
-              Log in
+              {t(`header.login`)}
             </Link>
           </>
         )}

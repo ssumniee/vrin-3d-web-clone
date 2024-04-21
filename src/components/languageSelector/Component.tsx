@@ -1,54 +1,48 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
+import { languageCodeNameMap } from "./constant";
 import styles from "./style.module.scss";
 
-export type LanguageOption = {
-  label: "KOR" | "ENG" | "JPN";
-  value: "KR" | "US" | "JP";
-};
+export type LanguageCode = "ko" | "en";
+export type LanguageName = "KOR" | "ENG";
 
 type Props = {
-  languageOptions: LanguageOption[];
+  languages?: LanguageCode[];
   colorTheme: "light" | "dark";
 };
 
 const cx = classNames.bind(styles);
 
-function LanguageSelectorComponent({ languageOptions, colorTheme }: Props) {
+function LanguageSelectorComponent({
+  languages = [...languageCodeNameMap.keys()],
+  colorTheme,
+}: Props) {
   const [open, setOpen] = useState(false);
-  const [selected, setSelected] = useState(
-    sessionStorage.getItem("i18nextLng") || "US"
-  );
-
-  useEffect(() => {
-    sessionStorage.setItem("i18nextLng", selected);
-  }, [selected]);
+  const { i18n } = useTranslation();
 
   return (
     <div className={cx("component")} color-theme={colorTheme}>
       <button className={cx("button")} onClick={() => setOpen(!open)}>
-        <span>
-          {languageOptions.find(({ value }) => value === selected)?.label ||
-            "ENG"}
-        </span>
+        <span>{languageCodeNameMap.get(i18n.language as LanguageCode)}</span>
         <i className={`${cx("icon", "arrow")} material-icons`}>
           {open ? "expand_less" : "expand_more"}
         </i>
       </button>
       {open ? (
         <div className={cx("options")}>
-          {languageOptions.map(({ label, value }) => (
+          {languages.map((language) => (
             <div
-              key={`option-${value}`}
-              className={cx("option", { selected: selected === value })}
+              key={`option-${language}`}
+              className={cx("option", { selected: language === i18n.language })}
               onClick={() => {
-                setSelected(value);
+                i18n.changeLanguage(language);
                 setOpen(false);
               }}
             >
-              {label}
-              {selected === value ? (
+              {languageCodeNameMap.get(language)}
+              {language === i18n.language ? (
                 <i className={`${cx("icon", "check")} material-icons`}>check</i>
               ) : null}
             </div>
