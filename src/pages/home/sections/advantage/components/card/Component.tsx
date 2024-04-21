@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
@@ -71,11 +71,16 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
           ))}
         </div>
         {highlighted ? (
-          <img className={cx("icon")} src="assets/icons/cross-circle.svg" />
+          <img
+            className={cx("icon")}
+            src="assets/icons/cross-circle.svg"
+            alt=""
+          />
         ) : (
           <img
             className={cx("icon")}
             src="assets/icons/arrow-circle-outward.svg"
+            alt=""
           />
         )}
       </div>
@@ -83,6 +88,7 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
         <img
           className={cx(`${data.type}-main`)}
           src={`assets/images/${data.image}`}
+          alt=""
         />
         {isVideoCardData(data) ? <VideoCardAnimation {...data} /> : null}
         {isScreenshotsCardData(data) ? (
@@ -99,6 +105,7 @@ function VideoCardAnimation({ background, video }: CardData<"video">) {
       <img
         className={cx("video-background")}
         src={`assets/images/${background}`}
+        alt=""
       />
       <video src={`assets/videos/${video}`} loop playsInline autoPlay muted />
     </>
@@ -124,6 +131,7 @@ function ScreenshotsCardAnimation({ screenshots }: CardData<"screenshots">) {
           className={cx("screenshot", idx)}
           src={`assets/images/${screenshot}`}
           style={{ opacity: idx === playingIdx ? 1 : 0 }}
+          alt=""
         />
       ))}
     </>

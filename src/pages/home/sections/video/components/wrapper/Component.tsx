@@ -66,6 +66,7 @@ function VideoWrapperComponent({
             <img
               key={`video-${index}-icon-${idx}`}
               src={`assets/icons/${idx === index ? icon : "dot.svg"}`}
+              alt=""
             />
           ))}
         </div>
