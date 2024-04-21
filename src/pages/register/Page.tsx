@@ -1,14 +1,18 @@
+import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
+import { HeaderComponent } from "../../components/header";
 import styles from "./style.module.scss";
 
 const cx = classNames.bind(styles);
 
 function RegisterPage() {
+  const { t } = useTranslation();
+
   return (
     <div className={cx("page")}>
-      <h1>Register</h1>
-      <p>등록 페이지</p>
+      <HeaderComponent colorTheme="light" />
+      <h1>{t("register.title")}</h1>
     </div>
   );
 }

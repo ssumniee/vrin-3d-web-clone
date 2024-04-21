@@ -34,7 +34,9 @@ function HeaderComponent({
               setOpen((current) => !current);
             }}
           />
-          <i className={cx("icon", "logo")} />
+          <Link to="/">
+            <i className={cx("icon", "logo")} />
+          </Link>
         </div>
         <div className={cx("buttons")}>
           <p className={cx("message")}>{t("header.message")}</p>

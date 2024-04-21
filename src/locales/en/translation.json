@@ -5,6 +5,9 @@
     "message": "If you want to use VRIN 3D",
     "register": "Get started for free"
   },
+  "footer": {
+    "register": "Get started for free"
+  },
   "home": {
     "main": {
       "title": "3D Model\ngenerated with AI",
@@ -95,7 +98,13 @@
       "register": "Get started for free"
     }
   },
-  "footer": {
-    "register": "Get started for free"
+  "pricing": {
+    "title": "Pricing Page"
+  },
+  "login": {
+    "title": "Log in Page"
+  },
+  "register": {
+    "title": "Register Page"
   }
 }
