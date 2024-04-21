@@ -94,5 +94,8 @@
       "title": "Still hesitating?",
       "register": "Get started for free"
     }
+  },
+  "footer": {
+    "register": "Get started for free"
   }
 }

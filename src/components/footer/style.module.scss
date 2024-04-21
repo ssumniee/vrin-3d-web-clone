@@ -1,0 +1,29 @@
+.component {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+  z-index: 998;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 16px 0px;
+}
+
+.button {
+  width: calc(100% - 40px);
+  padding: 12px 20px;
+  border-radius: 4px;
+  background-color: #3737cc;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 140%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 601px) {
+  .component {
+    display: none;
+  }
+}
