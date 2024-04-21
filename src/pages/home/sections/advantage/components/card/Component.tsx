@@ -71,18 +71,18 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
           ))}
         </div>
         {highlighted ? (
-          <img className={cx("icon")} src="/assets/icons/cross-circle.svg" />
+          <img className={cx("icon")} src="assets/icons/cross-circle.svg" />
         ) : (
           <img
             className={cx("icon")}
-            src="/assets/icons/arrow-circle-outward.svg"
+            src="assets/icons/arrow-circle-outward.svg"
           />
         )}
       </div>
       <div className={cx("content", i18n.language)}>
         <img
           className={cx(`${data.type}-main`)}
-          src={`/assets/images/${data.image}`}
+          src={`assets/images/${data.image}`}
         />
         {isVideoCardData(data) ? <VideoCardAnimation {...data} /> : null}
         {isScreenshotsCardData(data) ? (
@@ -98,9 +98,9 @@ function VideoCardAnimation({ background, video }: CardData<"video">) {
     <>
       <img
         className={cx("video-background")}
-        src={`/assets/images/${background}`}
+        src={`assets/images/${background}`}
       />
-      <video src={`/assets/videos/${video}`} loop playsInline autoPlay muted />
+      <video src={`assets/videos/${video}`} loop playsInline autoPlay muted />
     </>
   );
 }
@@ -122,7 +122,7 @@ function ScreenshotsCardAnimation({ screenshots }: CardData<"screenshots">) {
         <img
           key={screenshot}
           className={cx("screenshot", idx)}
-          src={`/assets/images/${screenshot}`}
+          src={`assets/images/${screenshot}`}
           style={{ opacity: idx === playingIdx ? 1 : 0 }}
         />
       ))}

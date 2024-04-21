@@ -36,7 +36,7 @@ function StackItem({
     <div className={cx("item")}>
       <div className={cx("title")}>
         {title}
-        <img className={cx("icon")} src={`/assets/icons/${icon}`} />
+        <img className={cx("icon")} src={`assets/icons/${icon}`} />
       </div>
       <div className={cx("sub-title")}>{subTitle}</div>
       <div className={cx("description")}>{description}</div>

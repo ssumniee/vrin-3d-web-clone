@@ -44,7 +44,7 @@ function SliderComponent({ items, settings = {} }: Props) {
             <div key={`slide-${idx}`} className={cx("slide")}>
               <img
                 className={cx("background")}
-                src={`/assets/images/${image}`}
+                src={`assets/images/${image}`}
               />
               <div className={cx("title")}>
                 <div>{title}</div>
@@ -55,10 +55,10 @@ function SliderComponent({ items, settings = {} }: Props) {
         </Slider>
         <div className={cx("arrows")}>
           <button className={cx("arrow", "prev")} onClick={handlePrevClick}>
-            <img src="/assets/icons/arrow-circle-left.svg" />
+            <img src="assets/icons/arrow-circle-left.svg" />
           </button>
           <button className={cx("arrow", "next")} onClick={handleNextClick}>
-            <img src="/assets/icons/arrow-circle-right.svg" />
+            <img src="assets/icons/arrow-circle-right.svg" />
           </button>
         </div>
         <div className={cx("shadow")} />

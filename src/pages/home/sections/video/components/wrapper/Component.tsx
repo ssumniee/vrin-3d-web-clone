@@ -50,7 +50,7 @@ function VideoWrapperComponent({
     <div ref={ref} id={`video-wrapper-${index}`} className={cx("wrapper")}>
       <div className={cx("video", videoPosition)}>
         <video
-          src={`/assets/videos/${video}`}
+          src={`assets/videos/${video}`}
           width="100%"
           height="100%"
           loop
@@ -65,7 +65,7 @@ function VideoWrapperComponent({
           {Array.from({ length }, (_, idx) => (
             <img
               key={`video-${index}-icon-${idx}`}
-              src={`/assets/icons/${idx === index ? icon : "dot.svg"}`}
+              src={`assets/icons/${idx === index ? icon : "dot.svg"}`}
             />
           ))}
         </div>
