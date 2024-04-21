@@ -100,7 +100,7 @@ function VideoCardAnimation({ background, video }: CardData<"video">) {
         className={cx("video-background")}
         src={`/assets/images/${background}`}
       />
-      <video src={`/assets/videos/${video}`} loop playsInline autoPlay />
+      <video src={`/assets/videos/${video}`} loop playsInline autoPlay muted />
     </>
   );
 }

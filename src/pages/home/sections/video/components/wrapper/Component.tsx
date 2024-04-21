@@ -56,6 +56,7 @@ function VideoWrapperComponent({
           loop
           playsInline
           autoPlay
+          muted
         />
         <div className={cx("shadow")} />
       </div>
