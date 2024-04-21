@@ -59,6 +59,10 @@ body {
   a {
     text-decoration: none;
   }
+
+  h1 {
+    margin: 0;
+  }
 }
 
 code {
