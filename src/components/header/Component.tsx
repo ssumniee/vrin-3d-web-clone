@@ -37,23 +37,18 @@ function HeaderComponent({
           <i className={cx("icon", "logo")} />
         </div>
         <div className={cx("buttons")}>
-          {simplified ? (
-            <p className={cx("message")}>{t("header.message")}</p>
-          ) : (
-            <>
-              <Link to="/pricing" className={cx("button", "pricing")}>
-                {t("header.pricing")}
-              </Link>
-              <LanguageSelectorComponent
-                className={cx("button", "language")}
-                colorTheme={colorTheme}
-                languages={languages}
-              />
-              <Link to="/login" className={cx("button", "login")}>
-                {t("header.login")}
-              </Link>
-            </>
-          )}
+          <p className={cx("message")}>{t("header.message")}</p>
+          <Link to="/pricing" className={cx("button", "pricing")}>
+            {t("header.pricing")}
+          </Link>
+          <LanguageSelectorComponent
+            className={cx("button", "language")}
+            colorTheme={colorTheme}
+            languages={languages}
+          />
+          <Link to="/login" className={cx("button", "login")}>
+            {t("header.login")}
+          </Link>
           <Link to="/register" className={cx("button", "register")}>
             {t("header.register")}
           </Link>
