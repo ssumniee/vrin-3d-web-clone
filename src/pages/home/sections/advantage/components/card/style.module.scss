@@ -185,6 +185,26 @@
   }
 }
 
+@media only screen and (max-width: 1280px) {
+  .item {
+    .content {
+      &.en {
+        video {
+          top: 23vw;
+          right: 5.2vw;
+        }
+      }
+
+      &.ko {
+        video {
+          top: 15vw;
+          right: 4.75vw;
+        }
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .component {
     margin-top: 40px;
@@ -221,30 +241,27 @@
     }
 
     .content {
-      &.en,
-      &.ko {
-        img {
-          &.video-main {
-            width: 107%;
-            min-width: 415px;
-            right: -20px;
-          }
+      img {
+        &.video-main {
+          width: 107%;
+          min-width: 415px;
+          right: -20px;
+        }
 
-          &.screenshots-main {
-            width: 85%;
-            min-width: 320px;
-            right: 35px;
-          }
+        &.screenshots-main {
+          width: 85%;
+          min-width: 320px;
+          right: 35px;
+        }
 
-          &.video-background {
-            min-width: 415px;
-            right: -18px;
-          }
+        &.video-background {
+          min-width: 415px;
+          right: -18px;
+        }
 
-          &.screenshot {
-            top: 188px;
-            right: -12px;
-          }
+        &.screenshot {
+          top: 188px;
+          right: -12px;
         }
       }
 
@@ -337,42 +354,39 @@
     }
 
     .content {
-      &.en,
-      &.ko {
-        img {
-          &.video-main {
-            width: 377px;
-            min-width: 377px;
-            top: -120px;
-            right: 5px;
-          }
-
-          &.screenshots-main {
-            width: 326px;
-            min-width: 326px;
-            top: -52px;
-            right: 51px;
-          }
-
-          &.video-background {
-            width: 380px;
-            min-width: 380px;
-            top: -120px;
-            right: 6px;
-          }
-
-          &.screenshot {
-            width: 350px;
-            top: 10px;
-            right: -40px;
-          }
+      img {
+        &.video-main {
+          width: 377px;
+          min-width: 377px;
+          top: -120px;
+          right: 5px;
         }
 
-        video {
-          width: 157px;
-          top: -15px;
-          right: 68px;
+        &.screenshots-main {
+          width: 326px;
+          min-width: 326px;
+          top: -52px;
+          right: 51px;
         }
+
+        &.video-background {
+          width: 380px;
+          min-width: 380px;
+          top: -120px;
+          right: 6px;
+        }
+
+        &.screenshot {
+          width: 350px;
+          top: 10px;
+          right: -40px;
+        }
+      }
+
+      video {
+        width: 157px;
+        top: -15px;
+        right: 68px;
       }
     }
   }
@@ -407,43 +421,40 @@
     }
 
     .content {
-      &.en,
-      &.ko {
-        img {
-          &.video-main {
-            width: 53%;
-            min-width: 295px;
-            top: -12px;
-            right: -14px;
-          }
-
-          &.screenshots-main {
-            width: 43%;
-            min-width: 240px;
-            top: 22px;
-            right: 18px;
-          }
-
-          &.video-background {
-            width: 40%;
-            min-width: 300px;
-            top: -15px;
-            right: -12px;
-          }
-
-          &.screenshot {
-            width: 250px;
-            top: 111px;
-            right: -10px;
-          }
+      img {
+        &.video-main {
+          width: 53%;
+          min-width: 295px;
+          top: -12px;
+          right: -14px;
         }
 
-        video {
-          min-width: 120px;
-          width: 20%;
-          top: 70px;
-          right: 38px;
+        &.screenshots-main {
+          width: 43%;
+          min-width: 240px;
+          top: 22px;
+          right: 18px;
         }
+
+        &.video-background {
+          width: 40%;
+          min-width: 300px;
+          top: -15px;
+          right: -12px;
+        }
+
+        &.screenshot {
+          width: 250px;
+          top: 111px;
+          right: -10px;
+        }
+      }
+
+      video {
+        min-width: 120px;
+        width: 20%;
+        top: 70px;
+        right: 38px;
       }
     }
 
