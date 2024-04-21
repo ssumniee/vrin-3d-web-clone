@@ -1,5 +1,4 @@
 .component {
-  height: 70px;
   padding: 0 80px;
   position: fixed;
   top: 0;
@@ -7,26 +6,34 @@
   right: 0;
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &.simplified {
     .buttons {
-      justify-content: flex-end;
       column-gap: 24px;
     }
 
-    .button.register {
-      padding: 8px 20px;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 130%;
+    .button {
+      &.pricing,
+      &.language,
+      &.login {
+        display: none;
+      }
+
+      &.register {
+        padding: 8px 20px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 130%;
+      }
+    }
+
+    .message {
+      display: block;
     }
   }
 
   &[color-theme="light"] {
-    .logo .icon {
+    .icon {
       background-color: #000;
     }
 
@@ -48,7 +55,7 @@
   }
 
   &[color-theme="dark"] {
-    .logo .icon {
+    .icon {
       background-color: #fff;
     }
 
@@ -70,38 +77,66 @@
   }
 }
 
-.logo {
-  cursor: pointer;
+.component-wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 
   .icon {
-    mask: url("../../assets/icons/logo.svg") no-repeat;
     content: "";
     display: block;
-    width: 76px;
-    height: 24px;
+    cursor: pointer;
+
+    &.hamburger {
+      mask: url("../../assets/icons/hamburger.svg") no-repeat;
+      width: 18px;
+      height: 12px;
+      display: none;
+    }
+
+    &.cross {
+      mask: url("../../assets/icons/cross.svg") no-repeat;
+      margin: 0 -3px;
+      width: 24px;
+      height: 24px;
+      display: none;
+    }
+
+    &.logo {
+      mask: url("../../assets/icons/logo.svg") no-repeat;
+      width: 76px;
+      height: 24px;
+    }
   }
 }
 
 .buttons {
-  min-width: 440px;
   margin-left: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 60px;
+  gap: 60px;
 }
 
 .button {
   padding: 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   line-height: 140%;
   letter-spacing: 0;
+  white-space: nowrap;
 
   &.register {
     padding: 12px 20px;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 400;
     background-color: #3737cc;
 
@@ -113,8 +148,110 @@
 
 .message {
   margin: 0;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 140%;
   color: #fff;
+  display: none;
+}
+
+.tab {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  .component {
+    padding: 0px 70px;
+  }
+
+  .buttons {
+    gap: 32px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .buttons {
+    gap: 24px;
+  }
+
+  .button.register {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .component {
+    padding: 0px 20px;
+  }
+
+  .component-wrapper {
+    height: 60px;
+  }
+
+  .button {
+    &.pricing,
+    &.language,
+    &.register {
+      display: none;
+    }
+
+    &.login {
+      font-size: 1.4rem;
+    }
+  }
+
+  .icons {
+    .icon {
+      &.hamburger,
+      &.cross {
+        display: block;
+      }
+
+      &.logo {
+        mask: url("../../assets/icons/logo-small.svg") no-repeat;
+        width: 46px;
+        height: 14.52px;
+      }
+    }
+  }
+
+  .tab.open {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 32px 0px;
+
+    .item {
+      &.pricing,
+      &.language > span {
+        color: #fff;
+        width: fit-content;
+        font-size: 1.4rem;
+        font-weight: 600;
+        line-height: 140%;
+        letter-spacing: 0;
+        cursor: pointer;
+      }
+
+      &.language {
+        display: flex;
+        align-items: center;
+
+        & > span:not(.selected) {
+          color: #565d63;
+        }
+
+        .divider {
+          display: flex;
+          width: 1px;
+          height: 18px;
+          background-color: #6f757b;
+          margin: 0px 8px;
+        }
+      }
+    }
+  }
 }

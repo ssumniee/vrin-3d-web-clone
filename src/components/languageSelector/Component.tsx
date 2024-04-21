@@ -9,6 +9,7 @@ export type LanguageCode = "ko" | "en";
 export type LanguageName = "KOR" | "ENG";
 
 type Props = {
+  className?: string;
   languages?: LanguageCode[];
   colorTheme: "light" | "dark";
 };
@@ -16,6 +17,7 @@ type Props = {
 const cx = classNames.bind(styles);
 
 function LanguageSelectorComponent({
+  className = "",
   languages = [...languageCodeNameMap.keys()],
   colorTheme,
 }: Props) {
@@ -23,7 +25,7 @@ function LanguageSelectorComponent({
   const { i18n } = useTranslation();
 
   return (
-    <div className={cx("component")} color-theme={colorTheme}>
+    <div className={`${cx("component")} ${className}`} color-theme={colorTheme}>
       <button className={cx("button")} onClick={() => setOpen(!open)}>
         <span>{languageCodeNameMap.get(i18n.language as LanguageCode)}</span>
         <i className={`${cx("icon", "arrow")} material-icons`}>
