@@ -1,0 +1,36 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 260px;
+  min-height: 200px;
+  height: 16vw;
+  background: #3737cc;
+}
+
+.message {
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 16px;
+}
+
+.button.register {
+  width: fit-content;
+  height: auto;
+  background: #e6e8eb;
+  border-radius: 6px;
+  padding: 16px 56px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #3737cc;
+
+  &:hover {
+    background-color: #fff;
+  }
+}

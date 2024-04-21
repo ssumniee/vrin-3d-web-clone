@@ -1,0 +1,203 @@
+.component {
+  .container {
+    background-image: url("../../../../../../assets/images/home_D-1_pc.png");
+    max-width: 722px;
+    height: 674px;
+    margin-top: 72px;
+  }
+}
+
+.slider {
+  position: absolute;
+  top: 45%;
+  left: 430px;
+  width: 1020px;
+
+  .slide {
+    position: relative;
+    height: 434px;
+
+    img.background {
+      position: absolute;
+      width: 307px;
+    }
+
+    .title {
+      position: absolute;
+      bottom: 28px;
+      left: 24px;
+      z-index: 1;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 168%;
+      color: #fff;
+      display: flex;
+      align-items: center;
+
+      .icon {
+        mask: url("../../../../../../assets/icons/arrow-outward.svg");
+        margin-left: 4px;
+        width: 24px;
+        height: 24px;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+.arrows {
+  position: absolute;
+  top: -72px;
+  left: 88px;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 16px;
+
+  .arrow {
+    padding: 0;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  right: 194px;
+  width: 200px;
+  height: 434px;
+  background: linear-gradient(
+    270deg,
+    rgb(12, 16, 25) 0%,
+    rgba(12, 16, 25, 0) 100%
+  );
+}
+
+@media only screen and (max-width: 1024px) {
+  .component {
+    .container {
+      background-image: url("../../../../../../assets/images/home_D-1_laptop.png");
+      max-width: 280px;
+      height: 567px;
+      margin-top: 85px;
+    }
+  }
+
+  .slider {
+    left: 50px;
+    width: 903px;
+
+    .slide {
+      height: 404px;
+
+      img.background {
+        position: absolute;
+        width: 285px;
+      }
+
+      .title {
+        bottom: 24px;
+        left: 22px;
+
+        .icon {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+  }
+
+  .arrows {
+    left: 48px;
+  }
+
+  .shadow {
+    right: 107px;
+    width: 200px;
+    height: 404px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .component {
+    .container {
+      display: none;
+    }
+  }
+
+  .slider {
+    position: relative;
+    top: unset;
+    left: unset;
+    width: 800px;
+    margin-top: 75px;
+
+    .slide {
+      position: relative;
+      height: 146px;
+
+      img.background {
+        width: 252px;
+      }
+
+      .title {
+        position: absolute;
+        inset: 0;
+
+        > div {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          font-size: 1.8rem;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        .icon {
+          position: absolute;
+          bottom: 22px;
+          right: 36px;
+          mask: url("../../../../../../assets/icons/arrow-circle-outward-small.svg");
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .arrows {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .slider {
+    width: 700px;
+    margin-top: 29px;
+
+    .slide {
+      height: 128px;
+
+      img.background {
+        width: 220px;
+      }
+
+      .title {
+        > div {
+          top: 18px;
+          left: 18px;
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+
+        .icon {
+          bottom: 16px;
+          right: 30px;
+          width: 24px;
+          height: 24px;
+          mask-size: 24px;
+        }
+      }
+    }
+  }
+}

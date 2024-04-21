@@ -1,0 +1,139 @@
+.section {
+  background-image: url("../../../../assets/images/home_A-1_pc.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content-wrapper {
+  position: relative;
+  width: calc(100% - 180px);
+  max-width: 1300px;
+  height: 100vh;
+  max-height: 970px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.content {
+  position: absolute;
+  color: #fff;
+  left: 0;
+  bottom: 120px;
+  white-space: pre-wrap;
+
+  .title {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #e6e8eb;
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .description {
+    color: #bdc1c7;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  .button.register {
+    display: block;
+    padding: 16px;
+    margin-top: 56px;
+    width: 326px;
+    border-radius: 6px;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    background-color: #3737cc;
+    color: #fff;
+
+    &:hover {
+      background-color: #5d6cfa;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_laptop.png");
+  }
+
+  .content-wrapper {
+    max-width: 844px;
+    max-height: 870px;
+  }
+
+  .content {
+    .title {
+      font-size: 4.8rem;
+    }
+
+    .description {
+      font-size: 2.4rem;
+    }
+
+    .button.register {
+      max-width: 243px;
+      margin-top: 48px;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_tablet.png");
+  }
+
+  .content-wrapper {
+    max-width: 630px;
+    width: calc(100% - 140px);
+    max-height: 540px;
+  }
+
+  .content {
+    .title {
+      font-size: 4.4rem;
+    }
+
+    .button.register {
+      max-width: 210px;
+      padding: 12px;
+      margin-top: 40px;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section {
+    background-image: url("../../../../assets/images/home_A-1_mobile.png");
+  }
+
+  .content-wrapper {
+    width: calc(100% - 40px);
+    max-height: 420px;
+  }
+
+  .content {
+    .title {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 1.6rem;
+    }
+
+    .button.register {
+      max-width: 160px;
+      padding: 10px;
+      margin-top: 24px;
+      border-radius: 4px;
+      font-size: 1.4rem;
+    }
+  }
+}
