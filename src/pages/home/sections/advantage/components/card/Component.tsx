@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 
+import useInterval from "../../../../../../hooks/useInterval";
 import styles from "./style.module.scss";
 
 type CardData<T = "video" | "screenshots"> = {
@@ -78,31 +79,49 @@ function CardItem({ index, ...data }: { index: number } & CardData) {
           className={cx(`${data.type}-main`)}
           src={`/assets/images/${data.image}`}
         />
-        {isVideoCardData(data) ? (
-          <>
-            <img
-              className={cx("video-background")}
-              src={`/assets/images/${data.background}`}
-            />
-            <video
-              src={`/assets/videos/${data.video}`}
-              loop
-              playsInline
-              autoPlay
-            />
-          </>
+        {isVideoCardData(data) ? <VideoCardAnimation {...data} /> : null}
+        {isScreenshotsCardData(data) ? (
+          <ScreenshotsCardAnimation {...data} />
         ) : null}
-        {isScreenshotsCardData(data)
-          ? data.screenshots.map((screenshot, idx) => (
-              <img
-                key={screenshot}
-                className={cx("screenshot", idx)}
-                src={`/assets/images/${screenshot}`}
-              />
-            ))
-          : null}
       </div>
     </div>
+  );
+}
+
+function VideoCardAnimation({ background, video }: CardData<"video">) {
+  return (
+    <>
+      <img
+        className={cx("video-background")}
+        src={`/assets/images/${background}`}
+      />
+      <video src={`/assets/videos/${video}`} loop playsInline autoPlay />
+    </>
+  );
+}
+
+function ScreenshotsCardAnimation({ screenshots }: CardData<"screenshots">) {
+  const [playingIdx, setPlayingIdx] = useState(0);
+
+  useInterval(() => {
+    setPlayingIdx((current) => {
+      const next = current + 1;
+
+      return next === screenshots.length ? 0 : next;
+    });
+  }, 1000);
+
+  return (
+    <>
+      {screenshots.map((screenshot, idx) => (
+        <img
+          key={screenshot}
+          className={cx("screenshot", idx)}
+          src={`/assets/images/${screenshot}`}
+          style={{ opacity: idx === playingIdx ? 1 : 0 }}
+        />
+      ))}
+    </>
   );
 }
 
