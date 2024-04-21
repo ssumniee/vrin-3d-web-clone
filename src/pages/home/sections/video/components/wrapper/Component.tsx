@@ -26,8 +26,8 @@ function VideoWrapperComponent({
   descriptions,
 }: Props) {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [videPosition, setVideoPosition] = useState<
-    "above" | "fixed" | "below"
+  const [videoPosition, setVideoPosition] = useState<
+    "above" | "on-screen" | "below"
   >("below");
 
   useEffect(() => {
@@ -35,7 +35,7 @@ function VideoWrapperComponent({
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(({ boundingClientRect, isIntersecting }) => {
         if (isIntersecting) {
-          setVideoPosition("fixed");
+          setVideoPosition("on-screen");
         } else {
           setVideoPosition(boundingClientRect.top >= 0 ? "below" : "above");
         }
@@ -48,14 +48,7 @@ function VideoWrapperComponent({
 
   return (
     <div ref={ref} id={`video-wrapper-${index}`} className={cx("wrapper")}>
-      <div
-        className={cx("video")}
-        style={{
-          position: videPosition === "fixed" ? "fixed" : "absolute",
-          top: videPosition === "above" ? "unset" : "0",
-          bottom: videPosition === "above" ? "0" : "unset",
-        }}
-      >
+      <div className={cx("video", videoPosition)}>
         <video
           src={`/assets/videos/${video}`}
           width="100%"
