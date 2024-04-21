@@ -1,5 +1,94 @@
 {
   "header": {
-    "login": "로그인"
+    "pricing": "가격정책",
+    "login": "로그인",
+    "register": "무료로 시작하기"
+  },
+  "home": {
+    "main": {
+      "title": "AI로 만드는 3D 모델",
+      "subTitle1": "인공지능으로 자동 생성되는 3D 모델과",
+      "subTitle2": "손쉬운 편집을 경험해보세요.",
+      "subTitle3": null,
+      "register": "무료로 시작하기"
+    },
+    "video1": {
+      "title1": "모바일 기반의",
+      "title2": "간편한 3D 스캐닝",
+      "description1": "스튜디오와 고가의 스캐너 없이도",
+      "description2": "누구나, 언제든"
+    },
+    "video2": {
+      "title1": "AI 기술로 더욱 빠르고",
+      "title2": "더욱 리얼하게",
+      "description1": "3D 모델을 제작하세요."
+    },
+    "video3": {
+      "title1": "3D의 손쉬운 편집과",
+      "title2": "다양한 활용",
+      "description1": "VRIN 3D와 함께 시작하세요."
+    },
+    "advantage1": {
+      "title1": "시간도 비용도 절약하는 3D 모델 제작",
+      "description1": "무겁고 비싼 3D 스캐닝 장비없이 핸드폰 하나로 완성되는 3D,",
+      "description2": "시간과 비용을 절약해 콘텐츠를 효율적으로 제작하세요.",
+      "content": {
+        "item1": {
+          "title1": "기기비용 절감",
+          "description1": "3D 스캐너 기준"
+        },
+        "item2": {
+          "title1": "시간 감축",
+          "description1": "모델러 작업시간 기준"
+        },
+        "item3": {
+          "title1": "에셋 생성비용 절감",
+          "description1": "모델러 인건비 기준"
+        }
+      }
+    },
+    "advantage2": {
+      "title1": "스캔부터 편집까지 VRIN 3D에서 한번에",
+      "content": {
+        "item1": {
+          "title1": "모바일 기반의",
+          "title2": "간편한",
+          "title3": "3D 스캐닝",
+          "description1": "스튜디오와 고가의 스캐너 없이도",
+          "description2": "누구나, 언제나 가능한 3D 스캐닝",
+          "description3": null,
+          "description4": null
+        },
+        "item2": {
+          "title1": "누구나 손쉬운 편집이",
+          "title2": "가능하도록",
+          "title3": "VRIN 3D",
+          "title4": "에디터",
+          "description1": "AI 재질 생성, 배경 편집 등",
+          "description2": "에셋을 빠르게 편집",
+          "description3": null
+        }
+      }
+    },
+    "advantage3": {
+      "title1": "생성한 3D 모델로 제작하는 다양한 콘텐츠",
+      "description1": "VRIN 3D에서 제작한 3D 모델을 다운받아",
+      "description2": "상품 홍보, 가상쇼룸, 광고 VFX 등에 사용하세요.",
+      "content": {
+        "item1": {
+          "title1": "가상쇼룸"
+        },
+        "item2": {
+          "title1": "전시"
+        },
+        "item3": {
+          "title1": "상품홍보"
+        }
+      }
+    },
+    "closing": {
+      "title": "아직도 망설여지세요?",
+      "register": "무료로 시작하기"
+    }
   }
 }
