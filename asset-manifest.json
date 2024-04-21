@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vrin-3d-web-clone/static/css/main.f2db9b03.css",
-    "main.js": "/vrin-3d-web-clone/static/js/main.2eed50e8.js",
+    "main.css": "/vrin-3d-web-clone/static/css/main.f7b92f1e.css",
+    "main.js": "/vrin-3d-web-clone/static/js/main.253ba807.js",
     "static/js/453.be6364ff.chunk.js": "/vrin-3d-web-clone/static/js/453.be6364ff.chunk.js",
     "static/media/Pretendard-Black.woff": "/vrin-3d-web-clone/static/media/Pretendard-Black.c51355ddc1caec596031.woff",
     "static/media/Pretendard-ExtraBold.woff": "/vrin-3d-web-clone/static/media/Pretendard-ExtraBold.f6491e200d1fb5c5917b.woff",
@@ -21,12 +21,12 @@
     "static/media/cross.svg": "/vrin-3d-web-clone/static/media/cross.884c059b0ecd2b3bdfb1.svg",
     "static/media/arrow-circle-outward-small.svg": "/vrin-3d-web-clone/static/media/arrow-circle-outward-small.6ba77c01c81a4dd152a8.svg",
     "static/media/hamburger.svg": "/vrin-3d-web-clone/static/media/hamburger.5a1848fc19c917077c91.svg",
-    "main.f2db9b03.css.map": "/vrin-3d-web-clone/static/css/main.f2db9b03.css.map",
-    "main.2eed50e8.js.map": "/vrin-3d-web-clone/static/js/main.2eed50e8.js.map",
+    "main.f7b92f1e.css.map": "/vrin-3d-web-clone/static/css/main.f7b92f1e.css.map",
+    "main.253ba807.js.map": "/vrin-3d-web-clone/static/js/main.253ba807.js.map",
     "453.be6364ff.chunk.js.map": "/vrin-3d-web-clone/static/js/453.be6364ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f2db9b03.css",
-    "static/js/main.2eed50e8.js"
+    "static/css/main.f7b92f1e.css",
+    "static/js/main.253ba807.js"
   ]
 }
