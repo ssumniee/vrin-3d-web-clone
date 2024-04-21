@@ -113,14 +113,17 @@ function AdvantageSection() {
             {
               title: t("home.advantage3.content.item1.title"),
               image: `carousel_thumbnail_1_${size}.png`,
+              url: "https://www.instagram.com/rebuilderai/p/Ckze-2mgevQ",
             },
             {
               title: t("home.advantage3.content.item2.title"),
               image: `carousel_thumbnail_2_${size}.png`,
+              url: "https://www.youtube.com/watch?v=FxhqKo1b5hA",
             },
             {
               title: t("home.advantage3.content.item3.title"),
               image: `carousel_thumbnail_3_${size}.png`,
+              url: "https://www.instagram.com/p/Ciw4xWSAhWU",
             },
           ]}
         />

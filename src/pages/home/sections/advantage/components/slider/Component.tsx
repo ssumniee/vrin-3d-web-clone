@@ -7,6 +7,7 @@ import styles from "./style.module.scss";
 type SlideData = {
   title: string;
   image: string;
+  url: string;
 };
 
 type Props = {
@@ -40,8 +41,13 @@ function SliderComponent({ items, settings = {} }: Props) {
       <div className={cx("container")} />
       <div className={cx("slider")}>
         <Slider ref={sliderRef} {...sliderSettings}>
-          {items.map(({ title, image }, idx) => (
-            <div key={`slide-${idx}`} className={cx("slide")}>
+          {items.map(({ title, image, url }, idx) => (
+            <a
+              key={`slide-${idx}`}
+              className={cx("slide")}
+              href={url}
+              target="_blank"
+            >
               <img
                 className={cx("background")}
                 src={`assets/images/${image}`}
@@ -51,7 +57,7 @@ function SliderComponent({ items, settings = {} }: Props) {
                 <div>{title}</div>
                 <i className={cx("icon")} />
               </div>
-            </div>
+            </a>
           ))}
         </Slider>
         <div className={cx("arrows")}>
